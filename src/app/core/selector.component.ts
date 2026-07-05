@@ -4,6 +4,8 @@ import { LayoutService } from './layout.service';
 
 @Component({
   selector: 'app-select',
+
+  standalone: false,
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.css'],
 })

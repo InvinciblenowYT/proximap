@@ -92,16 +92,6 @@ import { LanguageSelectorComponent } from './core/language-selector.component';
     LanguageSelectorComponent,
     CitySelectorComponent,
   ],
-  entryComponents: [
-    GuideSelectorComponent,
-    ImagesGuideComponent,
-    IssueListComponent,
-    NameGuideComponent,
-    PropertyGuideComponent,
-    NewFountainGuideComponent,
-    FountainPropertyDialogComponent,
-    IntroWindowComponent,
-  ],
   imports: [
     GoogleMaterialModule,
     BrowserAnimationsModule,

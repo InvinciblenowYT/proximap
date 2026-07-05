@@ -29,6 +29,8 @@ interface IconMap {
 
 @Component({
   selector: 'app-property-badge',
+
+  standalone: false,
   templateUrl: './fountain-property-badge.component.html',
   styleUrls: ['./fountain-property-badge.component.css'],
   providers: [SubscriptionService],

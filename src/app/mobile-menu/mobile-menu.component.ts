@@ -17,6 +17,8 @@ import * as sharedConstants from './../../assets/shared-constants.json';
 
 @Component({
   selector: 'app-mobile-menu',
+
+  standalone: false,
   templateUrl: './mobile-menu.component.html',
   styleUrls: ['./mobile-menu.component.css'],
   providers: [SubscriptionService],

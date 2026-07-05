@@ -17,6 +17,8 @@ import { Observable } from 'rxjs';
 import { FountainPropertiesMeta } from '../fountain_properties';
 @Component({
   selector: 'app-list',
+
+  standalone: false,
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
   providers: [SubscriptionService],

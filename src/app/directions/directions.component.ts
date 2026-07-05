@@ -9,6 +9,8 @@ import { DirectionsService, Leg, TravelMode } from './directions.service';
 
 @Component({
   selector: 'app-directions',
+
+  standalone: false,
   templateUrl: './directions.component.html',
   styleUrls: ['./directions.component.css'],
 })

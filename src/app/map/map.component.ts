@@ -27,6 +27,8 @@ import { skip } from 'rxjs/operators';
 
 @Component({
   selector: 'app-map',
+
+  standalone: false,
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
   providers: [SubscriptionService],
@@ -223,7 +225,7 @@ export class MapComponent implements OnInit {
       const afterFirstStyleLoad = () => {
         // on first load, it happens that fitBounds and jumpTo do not trigger `moveend` (at least not always)
         // so we trigger one manually
-        this.mapLocationChangeSubject.next();
+        this.mapLocationChangeSubject.next(undefined);
         this.map.off('styledata', afterFirstStyleLoad);
       };
       this.map.on('styledata', afterFirstStyleLoad);
@@ -526,7 +528,7 @@ export class MapComponent implements OnInit {
       this.setUserLocation(LngLat(event.lngLat.lng, event.lngLat.lat));
     });
     this.map.on('moveend', _ => {
-      this.mapLocationChangeSubject.next();
+      this.mapLocationChangeSubject.next(undefined);
     });
 
     // TODO @ralf.hauser, can the following be removed?

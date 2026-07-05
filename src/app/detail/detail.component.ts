@@ -28,6 +28,8 @@ const maxCaptionPartLgth = consts.maxWikiCiteLgth; // 150;
 
 @Component({
   selector: 'app-detail',
+
+  standalone: false,
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css'],
   providers: [SubscriptionService],

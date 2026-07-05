@@ -7,6 +7,8 @@ import { MapService } from './map.service';
 
 @Component({
   selector: 'app-city-selector',
+
+  standalone: false,
   templateUrl: './city-selector.component.html',
   styleUrls: ['./city-selector.component.css'],
 })

@@ -10,6 +10,8 @@ import { PropertyMetadata } from '../types';
 
 @Component({
   selector: 'app-call-to-action',
+
+  standalone: false,
   templateUrl: './call-to-action.component.html',
   styleUrls: ['./call-to-action.component.css'],
 })

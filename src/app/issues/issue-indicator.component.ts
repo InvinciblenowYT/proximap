@@ -13,6 +13,8 @@ import { IssueService } from '../issues/issue.service';
 
 @Component({
   selector: 'app-issue-indicator',
+
+  standalone: false,
   templateUrl: './issue-indicator.component.html',
   styleUrls: ['./issue-indicator.component.css'],
 })

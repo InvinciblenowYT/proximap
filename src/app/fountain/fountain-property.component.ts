@@ -15,6 +15,8 @@ import { FountainPropertiesMeta, FountainPropertyMeta } from '../fountain_proper
 
 @Component({
   selector: 'app-f-property',
+
+  standalone: false,
   templateUrl: './fountain-property.component.html',
   styleUrls: ['./fountain-property.component.css'],
 })

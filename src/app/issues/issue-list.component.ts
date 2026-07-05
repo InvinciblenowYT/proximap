@@ -11,6 +11,8 @@ import { MapService } from '../city/map.service';
 
 @Component({
   selector: 'app-issue-list',
+
+  standalone: false,
   templateUrl: './issue-list.component.html',
   styleUrls: ['./issue-list.component.css'],
 })

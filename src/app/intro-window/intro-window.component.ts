@@ -10,6 +10,8 @@ import * as sharedConstants from './../../assets/shared-constants.json';
 
 @Component({
   selector: 'app-intro-window',
+
+  standalone: false,
   templateUrl: './intro-window.component.html',
   styleUrls: ['./intro-window.component.css'],
 })

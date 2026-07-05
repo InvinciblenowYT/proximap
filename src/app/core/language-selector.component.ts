@@ -4,6 +4,8 @@ import { LanguageService } from './language.service';
 
 @Component({
   selector: 'app-lang-selector',
+
+  standalone: false,
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.css'],
 })

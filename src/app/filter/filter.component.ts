@@ -18,6 +18,8 @@ const PROPERTIES = ['potable', 'access_wheelchair', 'access_pet', 'access_bottle
 
 @Component({
   selector: 'app-filter',
+
+  standalone: false,
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css'],
   providers: [SubscriptionService],

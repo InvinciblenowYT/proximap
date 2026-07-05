@@ -9,6 +9,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'truncate',
+
+  standalone: false,
 })
 export class TruncatePipe implements PipeTransform {
   transform<T>(value: T, limit = 25, completeWords = false, ellipsis = '...'): T | string {

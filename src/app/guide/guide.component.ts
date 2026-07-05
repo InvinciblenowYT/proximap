@@ -84,6 +84,8 @@ const property_dict = [
 
 @Component({
   selector: 'app-guide-selector',
+
+  standalone: false,
   styleUrls: ['./guide.component.css'],
   template: '',
   providers: [SubscriptionService],
@@ -198,6 +200,7 @@ export class GuideSelectorComponent implements OnInit {
 
 @Component({
   selector: 'app-images-guide',
+  standalone: false,
   styleUrls: ['./guide.component.css'],
   templateUrl: './images.guide.component.html',
   providers: [SubscriptionService],
@@ -206,6 +209,7 @@ export class ImagesGuideComponent extends GuideSelectorComponent {}
 
 @Component({
   selector: 'app-fountain-guide',
+  standalone: false,
   styleUrls: ['./guide.component.css'],
   templateUrl: './new-fountain.guide.component.html',
   providers: [SubscriptionService],
@@ -214,6 +218,7 @@ export class NewFountainGuideComponent extends GuideSelectorComponent {}
 
 @Component({
   selector: 'app-property-guide',
+  standalone: false,
   styleUrls: ['./guide.component.css'],
   templateUrl: './property.guide.component.html',
   providers: [SubscriptionService],
@@ -222,6 +227,7 @@ export class PropertyGuideComponent extends GuideSelectorComponent {}
 
 @Component({
   selector: 'app-name-guide',
+  standalone: false,
   styleUrls: ['./guide.component.css'],
   templateUrl: './name.guide.component.html',
   providers: [SubscriptionService],

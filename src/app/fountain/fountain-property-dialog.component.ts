@@ -21,6 +21,8 @@ import { Fountain, SourceType } from '../types';
 
 @Component({
   selector: 'app-fountain-property-dialog',
+
+  standalone: false,
   templateUrl: './fountain-property-dialog.component.html',
   styleUrls: ['./fountain-property-dialog.component.css'],
   providers: [SubscriptionService],

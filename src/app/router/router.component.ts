@@ -8,7 +8,7 @@
 import '../shared/importAllExtensions';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
-import { combineLatest, of } from 'rxjs/index';
+import { combineLatest, of } from 'rxjs';
 import { SubscriptionService } from '../core/subscription.service';
 import { MapService, MapState } from '../city/map.service';
 import { distinctUntilChanged, filter, map } from 'rxjs/operators';
@@ -23,6 +23,8 @@ const programmaticRouting = 'programmaticRouting';
 
 @Component({
   selector: 'app-router',
+
+  standalone: false,
   templateUrl: './router.component.html',
   styleUrls: ['./router.component.css'],
   providers: [SubscriptionService],
