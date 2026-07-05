@@ -205,7 +205,7 @@ export class RoutingService {
       );
   }
 
-  private extractLngLatFromOsmData(type: string, data: Object): LngLat | undefined {
+  private extractLngLatFromOsmData(type: string, data: object): LngLat | undefined {
     let fountain = null;
     if (type === 'node') {
       fountain = _.get(data, ['elements', 0]);

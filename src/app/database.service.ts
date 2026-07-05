@@ -93,7 +93,7 @@ export function essenceOf(fountain: Fountain, propertyMetadataCollection: Founta
       //we don't want google defaults
       console.log(props['id'] + ' ');
       const gv: Image[] = gal.value;
-      if (null != gv && 0 < gv.length && null != gv[0] && null != gv[0].small) {
+      if (null != gv && 0 < gv.length && null != gv[0]?.small) {
         prepImg(gv, props['id']);
         const gvs = gv[0].small;
         if (0 < gvs.trim().length) {

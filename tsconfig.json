@@ -1,10 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "module": "es2020",
-    "target": "es2018",
+    "module": "es2022",
+    "target": "es2022",
     "lib": ["es2017", "dom"],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

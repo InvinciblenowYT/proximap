@@ -98,14 +98,18 @@ export class AppComponent implements OnInit {
         }),
       this.layoutService.showMenu.subscribe(show => {
         if (this.menuDrawer) {
-          show ? this.menuDrawer.open() : this.menuDrawer.close();
+          if (show) {
+            this.menuDrawer.open();
+          } else {
+            this.menuDrawer.close();
+          }
         }
       }),
       this.issueService.appErrors.subscribe(list => {
         if (list.length && !this.dialogRef) {
           this.dialogRef = this.dialog.open(IssueListComponent, DialogConfig);
 
-          this.dialogRef.afterClosed().pipe(finalize(() => (this.dialogRef = undefined)));
+          this.dialogRef.afterClosed().pipe(finalize(() => (this.dialogRef = undefined))).subscribe();
         }
       }),
       this.fountainService.selectedProperty

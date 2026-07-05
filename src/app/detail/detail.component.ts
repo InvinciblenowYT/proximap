@@ -121,11 +121,11 @@ export class DetailComponent implements OnInit {
                     id = fProps['id_osm'].value;
                   }
                   const dscShort = fProps[`description_short_${lang}`];
-                  if (null != dscShort && null != dscShort.value && 0 < dscShort.value.trim().length) {
+                  if (null != dscShort?.value && 0 < dscShort.value.trim().length) {
                     descShortTrLc = dscShort.value.trim().toLowerCase();
                   }
                   const name = fProps[`name_${lang}`];
-                  if (null != name && null != name.value && 0 < name.value.trim().length) {
+                  if (null != name?.value && 0 < name.value.trim().length) {
                     nameTrLc = name.value.trim().toLowerCase();
                   }
                 }
@@ -185,7 +185,6 @@ export class DetailComponent implements OnInit {
                 // this.galleryOptions[0].thumbnailsPercent = 20;
                 // }
               }
-              // eslint-disable-next-line @typescript-eslint/no-implicit-any-catch
             } catch (err: unknown) {
               console.trace('fountain update: ' + (err as Error).stack);
             }
@@ -292,7 +291,6 @@ export class DetailComponent implements OnInit {
             iDsc = iDsc.substring(0, maxCaptionPartLgth) + '...';
             console.log('onImageChange dropped from iDsc "' + dropped + '" ' + dbg + ' ' + new Date().toISOString());
           }
-          maxCaptionPartLgth;
           wmd.caption += iDsc;
           console.log('onImageChange added iDsc ' + dbg + ' ' + new Date().toISOString());
           return true;

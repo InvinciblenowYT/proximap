@@ -9,7 +9,6 @@ import { HttpClient, HttpErrorResponse, HttpResponse, HttpResponseBase } from '@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import distance from 'haversine';
-import _ from 'lodash';
 import { combineLatest, Observable, of } from 'rxjs';
 import { environment } from '../environments/environment';
 import { versions as buildInfo } from '../environments/versions';
@@ -460,7 +459,7 @@ export class DataService {
       // If only one fountain is left, select it (wait a second because maybe the user is not done searching
       setTimeout(() => {
         const filtered = this._fountainsFiltered;
-        if (filtered !== undefined && filtered.length === 1 && filtered[0] !== undefined) {
+        if (filtered?.length === 1 && filtered[0] !== undefined) {
           console.log(
             'filterFountains: opening the only photo machting: ' +
               (phActive ? "'with" + (phModeWith ? "'" : "out'") : '') +
@@ -686,7 +685,7 @@ export class DataService {
           }
           countTit += '\'" ';
           let metaDesc = '';
-          if (null != iMeta && null != iMeta.description) {
+          if (null != iMeta?.description) {
             let maxDescLgth = 120; //Amazonenbrunnen is > 120 length (Q27230037)
             if (null != iMeta.license_short) {
               maxDescLgth -= iMeta.license_short.length;
@@ -813,7 +812,7 @@ export class DataService {
   private isCachedDataComplete(cached: Fountain, dbg: string | undefined): boolean {
     const props = cached.properties;
     if (null != props) {
-      if (null != props['wiki_commons_name'] && null != props['wiki_commons_name'].value) {
+      if (null != props['wiki_commons_name']?.value) {
         const cats = props['wiki_commons_name'].value;
         let i = 0;
         for (const cat of cats) {
@@ -835,7 +834,7 @@ export class DataService {
           i++;
         }
       }
-      if (null != props['gallery'] && null != props['gallery'].value) {
+      if (null != props['gallery']?.value) {
         const gal = props['gallery'].value;
         let i = 0;
         for (const gv of gal) {

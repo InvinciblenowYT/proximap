@@ -15,7 +15,7 @@ export interface PropertyMetadata {
   essential: boolean;
   type: string;
   name: Translated<string>;
-  descriptions: Object;
+  descriptions: object;
   src_pref: string[];
   src_config: NamedSources<SourceConfig<string, string>, SourceConfig<string, string>>;
   id: string;
